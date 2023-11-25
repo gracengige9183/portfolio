@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,500;1,900&display=swap"
+        rel="stylesheet">
+
+    <script>
+        // Function to display a fancy popup with email and message
+        function showFancyAlert() {
+            const fancyEffect = document.getElementById("fancyEffect");
+            var email = document.getElementById("email");
+            var message = document.getElementById("message")
+            var name = document.getElementById("userName");
+           
+            fancyEffect.textContent ="Hello"+" " + name.value + " " + "I have got your message saying" +" " + message.value + "." + " " + "Thank you, ill get back to you soon." ;
+            fancyEffect.style.display = "block";
+            setTimeout(() => {
+                fancyEffect.style.display = "none"
+            }, 10000);
+        }
+    </script>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: rgb(236, 236, 236);
+    }
+    #fancyEffect{
+        display: none;
+        background-color: rgb(8, 134, 8);
+        color: white;
+        padding: 1em 2em;
+        border-radius: 10px;
+    }
+    .alert-main{
+        position: absolute;
+        bottom: 0;
+       
+    }
+    textarea{
+        outline: none;
+        border: 1px solid rgb(192, 188, 188);
+        border-radius: 10px;
+        margin-bottom: 1em;
+        max-width: 72%;
+    }
+
+    .kik,
+    .container,
+    .deb {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .deb {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .web {
+        display: flex;
+        flex-direction: column;
+
+        gap: 1cm;
+    }
+
+    .row-one,
+    .row-two,
+    .box {
+        gap: 3em;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .kik {
+        flex-direction: column;
+    }
+
+    .but {
+        background-color: rgb(3, 3, 138);
+        color: white;
+        border-radius: 15px;
+        border: none;
+        padding: 0.7em 3em;
+        font-weight: bold;
+        cursor: pointer;
+        transition: .7s;
+    }
+
+    .but:hover {
+        background-color: rgb(55, 55, 138);
+    }
+
+
+    .mis {
+        font-weight: bold;
+    }
+
+    .data-input {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-me {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2em;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20em;
+    }
+
+
+
+    .contain {
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        font-size: 1.5em;
+        gap: 1em;
+        margin-right: 2em;
+        color: white;
+
+
+    }
+
+    .contain p:hover {
+        color: beige;
+
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .top {
+        padding: 1em 0;
+        background-color: rgb(179, 13, 13);
+    }
+
+    .to {
+        font-weight: bold;
+    }
+
+    .center-main {
+        padding: 0 10%;
+    }
+
+    .me,
+    .image {
+        flex: 1;
+    }
+
+    .image {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .image img {
+        border-radius: 50px;
+        transform: rotate(-20deg);
+        transition: 1s all;
+
+    }
+
+    .image img:hover {
+        scale: 1.1;
+    }
+
+    .image::after {
+        content: "";
+        position: absolute;
+        bottom: -3em;
+        width: 50%;
+        height: 80px;
+        background-color: rgb(236, 236, 236);
+    }
+
+    .kol {
+        font-size: 32px;
+        color: chocolate;
+        text-decoration: underline;
+        margin-bottom: 1em;
+    }
+
+    .mis {
+        font-size: 48px;
+        font-weight: bold;
+    }
+
+    .top-para {
+        font-size: 18px;
+        margin-bottom: .5em;
+    }
+
+    .hae {
+        font-size: 52px;
+        font-weight: bold;
+        color: rgb(3, 3, 138);
+    }
+
+    .service {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2em;
+    }
+
+    .title {
+        color: rgb(209, 89, 4);
+        margin-bottom: 4px;
+        text-decoration: underline;
+        font-size: 28px;
+    }
+
+    .design {
+        max-width: 70%;
+        text-align: center;
+    }
+
+    .row-one h1,
+    .row-two h1,
+    .about h1 {
+        color: rgb(209, 89, 4);
+        font-size: 1.5em;
+    }
+
+    .row-one {
+        margin-top: 2em;
+    }
+
+    .one {
+        width: 16em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 17em;
+        padding: 1em;
+        border-radius: 10px;
+        border: 1px solid rgb(204, 204, 204);
+        background-color: rgb(247, 247, 247);
+        transition: 1s all;
+        cursor: pointer;
+
+
+    }
+
+    .one:hover {
+        scale: 1.06;
+    }
+
+    .one img {
+        width: 70px;
+        margin-bottom: 1em;
+    }
+
+    .one h1 {
+        margin-bottom: 5px;
+    }
+
+    .about p {
+        font-size: 14px;
+        gap: 3px;
+    }
+
+    .data-input label {
+        font-size: small;
+        margin-bottom: 3px;
+    }
+
+    .data-input input {
+        margin-bottom: 1em;
+        outline: none;
+        border: 1px solid rgb(202, 202, 202);
+        padding: 6px 4px;
+        border-radius: 4px;
+        width: 70%;
+    }
+
+    .data-input {
+        width: 50%;
+
+    }
+
+    .about,
+    .data-input {
+        flex: 1;
+    }
+
+    .submit-btn {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1em;
+    }
+
+    .footer {
+        background-color: rgb(4, 4, 85);
+        color: white;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        width: 100%
+    }
+
+    .footer h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .footer p {
+        font-size: 12px;
+        margin-bottom: 4px;
+        color: wheat;
+    }
+
+    .footer p:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .overlay {
+        display: none;
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="main">
+
+        <div class="top">
+            <div class="contain">
+                <p>Home</p>
+                <p>About</p>
+                <p>Contact</p>
+            </div>
+        </div>
+        <div class="center-main">
+            <div class="container">
+                <div class="me">
+                    <p class="hae">HI!</p>
+                    <p class="mis">I'm Grace Ngige</p>
+                    <p class="kol">Front-end developer</p>
+                    <p class="top-para">Am a website developer, good at developing websites,website and software designs
+                    </p>
+                    <button class="but">HIRE ME</button>
+                </div>
+                <div class="image">
+                    <img class="kik" src="./images/grace.png" alt="" width="300">
+                </div>
+            </div>
+            <div class="deb">
+                <div class="service">
+                    <h1 class="title">My services</h1>
+                    <p class="design">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, minus. Sit at,
+                        aperiam veritatis harum quos saepe maxime voluptates tempore!</p>
+                </div>
+                <div class="web">
+                    <div class="row-one">
+                        <div class="one">
+                            <img src="./images/digital.png" alt="">
+                            <h1>Web development</h1>
+                            <p>Blog E-commerce</p>
+
+                        </div>
+                        <div class="one">
+                            <img src="./images/mobile.png" alt="">
+                            <h1>UI/UX design</h1>
+                            <p>mobile App website design</p>
+
+                        </div>
+                        <div class="one">
+                            <img src="./images/sound.png" alt="">
+                            <h1>sound Design</h1>
+                            <p>voice over, Beat making</p>
+
+                        </div>
+                    </div>
+                    <div class="row-two">
+                        <div class="box">
+                            <div class="one">
+                                <img src="./images/mobile.png" alt="">
+                                <h1>Game design</h1>
+                                <p>charachter design, props and object</p>
+
+                            </div>
+                            <div class="one">
+                                <img src="./images/photo.png" alt="">
+                                <h1>photography</h1>
+                                <p>portrait,product photography</p>
+
+                            </div>
+                            <div class="one">
+                                <img src="./images/photo.png" alt="">
+                                <h1>Advertisement</h1>
+                                <p>portrait,product photography</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-me">
+                <div class="about">
+                    <h1>About skills</h1>
+                    <p>Blog</p>
+                    <p>jobs</p>
+                    <p>Guidlines</p>
+                </div>
+
+                <div class="data-input">
+                    <label class="to" for="">Your Name here</label>
+                    <input type="text" placeholder="enter phone number" name="" id="userName" required>
+                    <label class="to" for="">Email</label>
+                    <input placeholder="Enter your email" name="" type="email" id="email" required>
+                    <label class="to" for="">Message</label>
+                    <textarea name="" id="message" rows="4" required></textarea>
+                    <div class="submit-btn">
+                        <button class="but" onclick="showFancyAlert()">Send</button>
+                    </div>
+                </div>
+                <div class="alert-main">
+                    <div class="" id="fancyEffect"></div>
+                </div>
+
+               
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <h1>Contact us</h1>
+            <p>P.O BOX 56789</p>
+            <P>Machakos</P>
+            <p>gracengige@gmail.com</p>
+            <p>0740165983</p>
+        </div>
+        <div>
+            <h1>Location</h1>
+            <p>Baraka plaza</p>
+            <p>second floor</p>
+            <p>Nakuru county</p>
+            <p>opposite Naiva suppermarket</p>
+        </div>
+        <div>
+            <h1>About us</h1>
+            <p>website development</p>
+            <p>web design</p>
+            <p>photography</p>
+            <p>software development</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
